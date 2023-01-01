@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ahorcado</title>
+</head>
+<body>
+    <main>
+        <div class="principal">
+            <div class="formulario">
+                <label class="labelPalabra" for="palabra">Ingresa la palabra a adivinar</label>
+                <input class="palabra" type="text" id="palabra">
+                <div class="btnEmpezar">
+                    <button id="btnempezar">Empezar</button>
+                </div>
+            </div>
+        </div>
+        <div class="principal2">
+            <div class="formulario2">
+                <label class="labelLetra" for="letra">Ingresa una letra</label>
+                <input class="letra" type="text" id="letra" maxlength="1">
+                <div class="buttonIngresar">
+                    <button id="btnIngresar">Ingresar</button>
+                </div>
+            </div>
+            <div class="campoPalabra">
+                <ul>
+                    <li class="cabeza">o</li>
+                    <li class="cuerpo" id="cuerpo">|</li>
+                    <li class="brazo_D" id="brazo_D">/</li>
+                    <li class="brazo_I" id="brazo_I">\</li>
+                    <li class="pierna_D" id="pierna_D">/</li>
+                    <li class="pierna_I" id="pierna_I">\</li>
+                </ul>
+                <input class="palabra-adivinar" type="text" id="adivinar" readonly>
+            </div>
+        </div>
+        <div class="campoLimpiar">
+            <a id="limpiar" class="btnLimpiar" href="index.html">limpiar</a>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; Copyright Encriptador - 2022 realizado por Gonzalo-LM</p>
+    </footer>
+    
+    <script src="js/ahorcado.js"></script>
+</body>
+</html>

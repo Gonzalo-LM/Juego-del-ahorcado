@@ -1,0 +1,198 @@
+body{
+    background: rgb(156, 240, 219);
+}
+
+/*----------Main----------*/
+
+.principal{
+    width: 70%;
+    margin: 50px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.formulario{
+    min-width: 50%;
+    margin: 50px auto;
+    padding: 100px 20px;
+    text-align: center;
+    background: rgba(53, 161, 31, 0.5);
+}
+
+.labelPalabra{
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    margin: 5px 0 10px;
+}
+
+.palabra{
+    text-align: center;
+    width: 60%;
+    font-size: 24px;
+}
+
+.btnEmpezar{   
+    margin: 20px auto;
+}
+
+.btnEmpezar button{
+    font-size: 26px;
+    cursor: pointer;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 1pc;
+    background: snow;
+}
+
+.btnEmpezar button:hover{
+    color: snow;
+    background: black;
+}
+
+.principal2{
+    min-width: 80%;
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.formulario2{
+    flex: 1;
+    min-width: 50%;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(53, 161, 31, 0.5);
+}
+
+.labelLetra{
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    margin: 5px 0 10px;
+}
+
+.letra{
+    text-align: center;
+    width: 20%;
+    font-size: 24px;
+}
+
+.buttonIngresar{
+    margin: 20px auto;
+}
+
+.buttonIngresar button{
+    font-size: 26px;
+    cursor: pointer;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 1pc;
+    background: snow;
+}
+
+.buttonIngresar button:hover{
+    color: snow;
+    background: black;
+}
+
+.campoPalabra{
+    flex: 2;
+    min-width: 50%;
+    text-align: center;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.cabeza{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.cuerpo{
+    margin-top: -20px;
+    font-size: 60px;
+}
+
+.brazo_D{
+    margin-top: -60px;
+    margin-left: -15px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.brazo_I{
+    margin-top: -60px;
+    margin-left: +15px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.pierna_D{
+    margin-top: -10px;
+    margin-left: -15px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.pierna_I{
+    margin-top: -60px;
+    margin-left: +15px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.palabra-adivinar{
+    padding: 10px 0;
+    width: 60%;
+    margin: 20px auto;
+    font-size: 28px;
+    border: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5em;
+    cursor: default;
+}
+
+.palabra-adivinar:focus{
+    outline: none;
+}
+
+.campoLimpiar{
+    margin: 20px 0;
+}
+
+.btnLimpiar{
+    font-size: 26px;
+    color: snow;
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 1pc;
+    background: black;
+}
+
+.btnLimpiar:hover{
+    color: black;
+    background: transparent;
+}
+
+/*----------Footer----------*/
+
+footer{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.521);
+    padding: 40px;
+}
+
+.copyright{
+    color: snow;
+    font-size: 16px;
+    margin: 20px;
+    font-weight: bold;
+}
