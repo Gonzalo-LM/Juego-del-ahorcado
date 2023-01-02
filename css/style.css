@@ -1,5 +1,6 @@
 body{
     background: rgb(156, 240, 219);
+    width: 100%;
 }
 
 /*----------Main----------*/
@@ -12,7 +13,7 @@ body{
 }
 
 .formulario{
-    min-width: 50%;
+    width: 80%;
     margin: 50px auto;
     padding: 100px 20px;
     text-align: center;
@@ -31,6 +32,8 @@ body{
     text-align: center;
     width: 60%;
     font-size: 24px;
+    padding: 15px 0;
+    text-transform: lowercase;
 }
 
 .btnEmpezar{   
@@ -51,8 +54,21 @@ body{
     background: black;
 }
 
+.Cantidad{
+    background: black;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    width: 10%;
+    outline: none;
+    color: snow;
+    cursor: default;
+}
+
+/*----------parte2----------*/
+
 .principal2{
-    min-width: 80%;
+    width: 80%;
     margin: 50px auto;
     padding: 30px;
     display: flex;
@@ -62,7 +78,7 @@ body{
 
 .formulario2{
     flex: 1;
-    min-width: 50%;
+    width: 30%;
     padding: 100px 20px;
     box-sizing: border-box;
     text-align: center;
@@ -81,6 +97,8 @@ body{
     text-align: center;
     width: 20%;
     font-size: 24px;
+    padding: 10px 0;
+    text-transform: lowercase;
 }
 
 .buttonIngresar{
@@ -103,11 +121,63 @@ body{
 
 .campoPalabra{
     flex: 2;
-    min-width: 50%;
+    min-width: 70%;
     text-align: center;
     padding: 25px;
     box-sizing: border-box;
 }
+
+.palabra-adivinar{
+    padding: 10px 0;
+    width: 60%;
+    margin: 20px auto;
+    font-size: 28px;
+    border: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5em;
+    cursor: default;
+    text-transform: lowercase;
+}
+
+.palabra-adivinar:focus{
+    outline: none;
+}
+
+.campoLimpiar{
+    margin: 20px 0;
+}
+
+.btnLimpiar{
+    font-size: 26px;
+    color: snow;
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 1pc;
+    background: black;
+}
+
+.btnLimpiar:hover{
+    color: black;
+    background: transparent;
+}
+
+@media screen and (max-width: 480px){
+    .principal, .principal2{
+        width: 90%;
+    }
+
+    .formulario, .formulario2{
+        width: 80%;
+    }
+
+    .palabra-adivinar{
+        width: 100%;
+    }
+}
+
+/*----------muñeco----------*/
 
 .cabeza{
     font-size: 60px;
@@ -145,41 +215,6 @@ body{
     margin-left: +15px;
     font-size: 60px;
     font-weight: bold;
-}
-
-.palabra-adivinar{
-    padding: 10px 0;
-    width: 60%;
-    margin: 20px auto;
-    font-size: 28px;
-    border: none;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.5);
-    letter-spacing: 0.5em;
-    cursor: default;
-}
-
-.palabra-adivinar:focus{
-    outline: none;
-}
-
-.campoLimpiar{
-    margin: 20px 0;
-}
-
-.btnLimpiar{
-    font-size: 26px;
-    color: snow;
-    text-decoration: none;
-    padding: 5px 15px;
-    border: 1px solid black;
-    border-radius: 1pc;
-    background: black;
-}
-
-.btnLimpiar:hover{
-    color: black;
-    background: transparent;
 }
 
 /*----------Footer----------*/

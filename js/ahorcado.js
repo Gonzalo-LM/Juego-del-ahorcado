@@ -1,6 +1,7 @@
 var ingresar_palabra = document.querySelector("#palabra");
 var ingresar_letra = document.querySelector("#letra");
 var adivinar_palabra = document.querySelector("#adivinar");
+var cantidad_palabra = document.querySelector("#cantidad");
 
 var btn_empezar = document.querySelector("#btnempezar");
 var btn_ingresar = document.querySelector("#btnIngresar");
@@ -17,6 +18,9 @@ brazo_D.style.visibility = "hidden";
 brazo_I.style.visibility = "hidden";
 pierna_D.style.visibility = "hidden";
 pierna_I.style.visibility = "hidden";
+
+ingresar_letra.disabled = true;
+btn_ingresar.disabled = true;
 
 var adivinar = [];
 var oracion = [];
@@ -52,8 +56,8 @@ function validar(letra){
         }
         else if(intentos == 0){
             pierna_I.style.visibility = "visible";
-            //alert("Perdiste todos tus intentos");
-            btn_limpiar.onclick = location.reload();
+            /*alert("Perdiste todos tus intentos");
+            btn_limpiar.onclick = location.reload();*/
         }
     }
     
@@ -61,10 +65,19 @@ function validar(letra){
 
 function enviarPalabra(){
     if(adivinar.length == 0){
-        adivinar = ingresar_palabra.value.toString().split("");
-        palabra = ingresar_palabra.value.toString();
+        ingresar_letra.disabled = false;
+        btn_ingresar.disabled = false;
+        adivinar = ingresar_palabra.value.toString().toLowerCase().split("");
+        palabra = ingresar_palabra.value.toString().toLowerCase();
+        cantidad = palabra.replaceAll(" ", "");
+        cantidad_palabra.value = cantidad.length;
         for(var p = 0; p < adivinar.length; p++){
-            oracion.push(" ");
+            if(adivinar[p] != " "){
+                oracion.push("_");
+            }else{
+                oracion.push(" ");
+            }
+            adivinar_palabra.value = oracion.toString().replaceAll(",", "");
         }
         ingresar_palabra.value = "";
     }else{
@@ -74,7 +87,7 @@ function enviarPalabra(){
 }
 
 function adivinarPalabra(){
-    let texto = ingresar_letra.value.toString();
+    let texto = ingresar_letra.value.toString().toLowerCase();
     if(adivinar.length != 0){
         for(var i = 0; i < adivinar.length; i++){
             validar(texto);
