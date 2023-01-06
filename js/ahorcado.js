@@ -75,29 +75,40 @@ function validar(letra){
 }
 
 function enviarPalabra(){
-    if(adivinar.length == 0){
-        ingresar_letra.disabled = false;
-        btn_ingresar.disabled = false;
-        adivinar = ingresar_palabra.value.toLowerCase().split("");
-        palabra = ingresar_palabra.value.toLowerCase();
-        cantidad = palabra.replaceAll(" ", "");
-        cantidad_palabra.value = cantidad.length;
-        for(var p = 0; p < adivinar.length; p++){
-            if(adivinar[p] != " "){
-                oracion.push("_");
-            }else{
-                oracion.push(" ");
+    if(ingresar_palabra.value != ""){
+        if(adivinar.length == 0){
+            ingresar_letra.disabled = false;
+            btn_ingresar.disabled = false;
+            adivinar = ingresar_palabra.value.toLowerCase().split("");
+            palabra = ingresar_palabra.value.toLowerCase();
+            cantidad = palabra.replaceAll(" ", "");
+            cantidad_palabra.value = cantidad.length;
+            for(var p = 0; p < adivinar.length; p++){
+                if(adivinar[p] != " "){
+                    oracion.push("_");
+                }else{
+                    oracion.push(" ");
+                }
+                adivinar_palabra.value = oracion.toString().replaceAll(",", "");
             }
-            adivinar_palabra.value = oracion.toString().replaceAll(",", "");
+            ingresar_palabra.value = "";
+            ingresar_letra.focus();
+        }else if( adivinar_palabra.value == palabra){
+            alert("Ya adivinaste la palabra, juega otra vez");
+            ingresar_palabra.value = "";
+        }else if(( adivinar_palabra.value != palabra) && (intentos == 0)){
+            alert("Ya perdiste todos tus intentos, juega otra vez");
+            ingresar_palabra.value = "";
+        }else if(( adivinar_palabra.value != palabra) && (intentos != 0)){
+            alert("Ya hay una palabra por adivinar");
+            ingresar_palabra.value = "";
+            ingresar_letra.focus();
         }
-        ingresar_palabra.value = "";
-    }else if( adivinar_palabra.value == palabra){
-        alert("Ya adivinaste la palabra, juega otra vez");
-    }else if(( adivinar_palabra.value != palabra) && (intentos == 0)){
-        alert("Ya perdiste todos tus intentos, juega otra vez");
-    }else if(( adivinar_palabra.value != palabra) && (intentos != 0)){
-        alert("Ya hay una palabra por adivinar");
+    }else{
+        alert("No has ingresado nada");
+        ingresar_palabra.focus();
     }
+    
 }
 
 function adivinarPalabra(){
