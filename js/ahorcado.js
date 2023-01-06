@@ -28,6 +28,11 @@ var palabra = "";
 var frase = "";
 var intentos = 5;
 
+function desactivar(){
+    ingresar_letra.disabled = true;
+    btn_ingresar.disabled = true;
+}
+
 function validar(letra){
     frase = "";
     if(adivinar.includes(letra)){
@@ -56,19 +61,19 @@ function validar(letra){
         }
         else if(intentos == 0){
             pierna_I.style.visibility = "visible";
-            /*alert("Perdiste todos tus intentos");
-            btn_limpiar.onclick = location.reload();*/
+            alert("Perdiste todos tus intentos");
+            desactivar();
         }
     }
-    
+    adivinar_palabra.value = oracion.toString().replaceAll(",", "");
 }
 
 function enviarPalabra(){
     if(adivinar.length == 0){
         ingresar_letra.disabled = false;
         btn_ingresar.disabled = false;
-        adivinar = ingresar_palabra.value.toString().toLowerCase().split("");
-        palabra = ingresar_palabra.value.toString().toLowerCase();
+        adivinar = ingresar_palabra.value.toLowerCase().split("");
+        palabra = ingresar_palabra.value.toLowerCase();
         cantidad = palabra.replaceAll(" ", "");
         cantidad_palabra.value = cantidad.length;
         for(var p = 0; p < adivinar.length; p++){
@@ -80,24 +85,26 @@ function enviarPalabra(){
             adivinar_palabra.value = oracion.toString().replaceAll(",", "");
         }
         ingresar_palabra.value = "";
-    }else{
-        alert("ya hay una palabra por adivinar");
+    }else if( adivinar_palabra.value == palabra){
+        alert("Ya adivinaste la palabra, juega otra vez");
+    }else if(( adivinar_palabra.value != palabra) && (intentos == 0)){
+        alert("Ya perdiste todos tus intentos, juega otra vez");
+    }else if(( adivinar_palabra.value != palabra) && (intentos != 0)){
+        alert("Ya hay una palabra por adivinar");
     }
-    
 }
 
 function adivinarPalabra(){
-    let texto = ingresar_letra.value.toString().toLowerCase();
+    let texto = ingresar_letra.value.toLowerCase();
     if(adivinar.length != 0){
         for(var i = 0; i < adivinar.length; i++){
             validar(texto);
             break;
         }
-        adivinar_palabra.value = oracion.toString().replaceAll(",", "");
-        /*if(palabra == adivinar_palabra.value){
-            alert("Ganaste!!! lograste adivinar la palabra");
-            btn_limpiar.onclick = location.reload();
-        }*/
+    }
+    if(palabra == adivinar_palabra.value){
+        alert("Ganaste!!! lograste adivinar la palabra");
+        desactivar();
     }
 }
 
