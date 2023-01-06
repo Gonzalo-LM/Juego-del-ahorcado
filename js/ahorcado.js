@@ -22,6 +22,8 @@ pierna_I.style.visibility = "hidden";
 ingresar_letra.disabled = true;
 btn_ingresar.disabled = true;
 
+ingresar_palabra.focus();
+
 var adivinar = [];
 var oracion = [];
 var palabra = "";
@@ -44,6 +46,8 @@ function validar(letra){
                 oracion = oracion;
             }
         }
+        ingresar_letra.value = "";
+        ingresar_letra.focus();
     }else{
         oracion = oracion;
         intentos -= 1;
@@ -64,6 +68,8 @@ function validar(letra){
             alert("Perdiste todos tus intentos");
             desactivar();
         }
+        ingresar_letra.value = "";
+        ingresar_letra.focus();
     }
     adivinar_palabra.value = oracion.toString().replaceAll(",", "");
 }
