@@ -93,7 +93,7 @@ body{
     margin: 5px 0 10px;
 }
 
-.letra{
+.letrac{
     text-align: center;
     width: 20%;
     font-size: 24px;
@@ -101,11 +101,18 @@ body{
     text-transform: lowercase;
 }
 
+.oracionc{
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 5px;
+    text-transform: lowercase;
+}
+
 .buttonIngresar{
     margin: 20px auto;
 }
 
-.buttonIngresar button{
+.buttonIngresar button, #btncambiarLetra, #btncambiarOracion{
     font-size: 26px;
     cursor: pointer;
     color: black;
@@ -114,7 +121,7 @@ body{
     background: snow;
 }
 
-.buttonIngresar button:hover{
+.buttonIngresar button:hover, #btncambiarLetra:hover, #btncambiarOracion:hover{
     color: snow;
     background: black;
 }
