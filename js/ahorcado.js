@@ -112,9 +112,11 @@ function validar(letra){
 
 function enviarPalabra(){
     if(ingresar_palabra.value != ""){
-        if(adivinar.length == 0){      
-            adivinar = ingresar_palabra.value.toLowerCase().split("");
-            palabra = ingresar_palabra.value.toLowerCase();
+        if(adivinar.length == 0){
+            var tilde = ingresar_palabra.value.replaceAll("á", "a").replaceAll("é", "e")
+            .replaceAll("í", "i").replaceAll("ó", "o").replaceAll("ú", "u");
+            adivinar = tilde.toLowerCase().split("");
+            palabra = tilde.toLowerCase();
             cantidad = palabra.replaceAll(" ", "");
             cantidad_palabra.value = cantidad.length;
             for(var p = 0; p < adivinar.length; p++){
@@ -147,7 +149,8 @@ function enviarPalabra(){
 }
 
 function adivinarPalabra(){
-    let texto = ingresar_letra.value.toLowerCase();
+    let texto = ingresar_letra.value.toLowerCase().replaceAll("á", "a").replaceAll("é", "e")
+    .replaceAll("í", "i").replaceAll("ó", "o").replaceAll("ú", "u");
     if(texto != ""){
         if(adivinar.length != 0){
             for(var i = 0; i < adivinar.length; i++){
@@ -166,7 +169,8 @@ function adivinarPalabra(){
 }
 
 function adivinarPalabraCompleta(){
-    let textocompleto = ingresar_oracion.value.toLowerCase();
+    let textocompleto = ingresar_oracion.value.toLowerCase().replaceAll("á", "a").replaceAll("é", "e")
+    .replaceAll("í", "i").replaceAll("ó", "o").replaceAll("ú", "u");
     if(textocompleto != ""){
         if(palabra == textocompleto){
             adivinar_palabra.value = textocompleto;

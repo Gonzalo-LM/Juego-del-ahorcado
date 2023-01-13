@@ -54,12 +54,29 @@ body{
     background: black;
 }
 
+.campo_cantidad{
+    margin: 10px auto;
+    width: 50%;
+    text-align: center;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
+
+.cantidad_letras{
+    color: snow;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .Cantidad{
+    margin: 10px 5px;
+    padding: 5px 0;
+    box-sizing: border-box;
     background: black;
     font-size: 26px;
     font-weight: bold;
     text-align: center;
-    width: 10%;
+    width: 50%;
     outline: none;
     color: snow;
     cursor: default;
@@ -105,6 +122,7 @@ body{
     width: 100%;
     font-size: 20px;
     padding: 10px 5px;
+    box-sizing: border-box;
     text-transform: lowercase;
 }
 
@@ -132,6 +150,7 @@ body{
     text-align: center;
     padding: 25px;
     box-sizing: border-box;
+    background: white;
 }
 
 .palabra-adivinar{
@@ -141,7 +160,7 @@ body{
     font-size: 28px;
     border: none;
     text-align: center;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(139, 118, 118, 0.5);
     letter-spacing: 0.5em;
     cursor: default;
     text-transform: lowercase;
@@ -189,37 +208,39 @@ body{
 .cabeza{
     font-size: 60px;
     font-weight: bold;
+
 }
 
 .cuerpo{
-    margin-top: -20px;
+    margin-top: -105px;
+    margin-left: 93px;
     font-size: 60px;
 }
 
 .brazo_D{
     margin-top: -60px;
-    margin-left: -15px;
+    margin-left: 78px;
     font-size: 60px;
     font-weight: bold;
 }
 
 .brazo_I{
     margin-top: -60px;
-    margin-left: +15px;
+    margin-left: 108px;
     font-size: 60px;
     font-weight: bold;
 }
 
 .pierna_D{
     margin-top: -10px;
-    margin-left: -15px;
+    margin-left: 78px;
     font-size: 60px;
     font-weight: bold;
 }
 
 .pierna_I{
     margin-top: -60px;
-    margin-left: +15px;
+    margin-left: 108px;
     font-size: 60px;
     font-weight: bold;
 }

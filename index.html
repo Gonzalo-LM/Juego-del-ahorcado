@@ -17,7 +17,8 @@
                 <div class="btnEmpezar">
                     <button id="btnempezar">Empezar</button>
                 </div>
-                <div>
+                <div class="campo_cantidad">
+                    <label for="cantidad" class="cantidad_letras">Cantidad de letras</label>
                     <input class="Cantidad" id="cantidad" readonly>
                 </div>
             </div>
@@ -47,15 +48,19 @@
                 </div>
             </div>
             <div class="campoPalabra">
-                <ul>
-                    <li class="cabeza">o</li>
-                    <li class="cuerpo" id="cuerpo">|</li>
-                    <li class="brazo_D" id="brazo_D">/</li>
-                    <li class="brazo_I" id="brazo_I">\</li>
-                    <li class="pierna_D" id="pierna_D">/</li>
-                    <li class="pierna_I" id="pierna_I">\</li>
-                </ul>
-                <input class="palabra-adivinar" type="text" id="adivinar" readonly>
+                <div>
+                    <ul>
+                        <li class="cabeza"><img src="imagenes/ahorcado.PNG" alt="base del ahorcado"></li>
+                        <li class="cuerpo" id="cuerpo">|</li>
+                        <li class="brazo_D" id="brazo_D">/</li>
+                        <li class="brazo_I" id="brazo_I">\</li>
+                        <li class="pierna_D" id="pierna_D">/</li>
+                        <li class="pierna_I" id="pierna_I">\</li>
+                    </ul>
+                </div>
+                <div>
+                    <input class="palabra-adivinar" type="text" id="adivinar" readonly>
+                </div>
             </div>
         </div>
         <div class="campoLimpiar">
